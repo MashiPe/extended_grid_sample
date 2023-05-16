@@ -4,7 +4,7 @@ This is just a detailed description of my proposal to extend the grid_sample fro
 
 ## Considerations
 
-Let's consider an image with dimensions $w,h$. Now, consider a rectangle within the image with dimensions $w^*,h^*$, call it *reference zone* $Z$, hence $w^*\leq w,h^*\leq h$. The *reference zone* $Z$ can be positioned at any location in the image with coordinates $x,y$ respectively for the *x* and *y* axis using the top left corner of the rectangle as reference. We can apply a geometric transformation (like homography or affine) $T$ to $Z$ using a sampling grid normalizing the corresponding axis $x\_axis=[0,w^*]$ and $y\_axis=[0,h^*]$ to $[-1,1]$ respectively. That allow us to apply an arbitrary transformation $T$ to an smaller portion of an image and project that transformation directly into a bigger space if needed like as illustrated in the next image.
+Let's consider an image with dimensions $w,h$. Now, consider a rectangle within the image with dimensions $w^\*,h^\*$, call it *reference zone* $Z$, hence $w^\*\leq w,h^\*\leq h$. The *reference zone* $Z$ can be positioned at any location in the image with coordinates $x,y$ respectively for the *x* and *y* axis using the top left corner of the rectangle as reference. We can apply a geometric transformation (like homography or affine) $T$ to $Z$ using a sampling grid normalizing the corresponding axis $x\_axis=[0,w^\*]$ and $y\_axis=[0,h^\*]$ to $[-1,1]$ respectively. That allow us to apply an arbitrary transformation $T$ to an smaller portion of an image and project that transformation directly into a bigger space if needed like as illustrated in the next image.
 
 insert image
 
@@ -14,11 +14,11 @@ insert image
 The procedure for this is not that straight forward to understand so let's make a step by step example.
 
 
-1) Define an image with dimensions $w=240, h=240$ and a zone $Z$ with dimensions $w^*=120,h^*=120$ placed at $x=100,y=100$. 
+1) Define an image with dimensions $w=240, h=240$ and a zone $Z$ with dimensions $w^\*=120,h^\*=120$ placed at $x=100,y=100$. 
 
 insert image
 
-2) Now we can define 2 grids to create our sampling grid. One for the $x\_axis$ coordinates and one for the $y\_axis$ coordinates. Both if this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^\*] $ and $[0:h^\*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
+2) Now we can define 2 grids to create our sampling grid. One for the $x_{axis}$ coordinates and one for the $y_{axis}$ coordinates. Both if this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^\*]$ and $[0:h^\*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
 
 insert image
 
