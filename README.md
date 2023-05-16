@@ -18,7 +18,7 @@ The procedure for this is not that straight forward to understand so let's make 
 
 insert image
 
-2) Now we can define 2 grids to create our sampling grid. One for the $x\_axis$ coordinates and one for the $y\_axis$ coordinates. Both if this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^*]$ and $[0:h^*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
+2) Now we can define 2 grids to create our sampling grid. One for the $x\_axis$ coordinates and one for the $y\_axis$ coordinates. Both if this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^*\]$ and $[0:h^*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
 
 insert image
 
