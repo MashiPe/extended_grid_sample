@@ -4,7 +4,7 @@ This is just a detailed description of my proposal to extend the grid_sample fro
 
 ## Considerations
 
-Let's consider an image with dimensions $w,h$. Now, consider a rectangle within the image with dimensions $w^\*,h^\*$, call it *reference zone* $Z$, hence $w^\*\leq w,h^\*\leq h$. The *reference zone* $Z$ can be positioned at any location in the image with coordinates $x,y$ respectively for the *x* and *y* axis using the top left corner of the rectangle as reference. We can apply a geometric transformation (like homography or affine) $T$ to $Z$ using a sampling grid normalizing the corresponding axis $x\_axis=[0,w^\*]$ and $y\_axis=[0,h^\*]$ to $[-1,1]$ respectively. That allow us to apply an arbitrary transformation $T$ to an smaller portion of an image and project that transformation directly into a bigger space if needed like as illustrated in the next image.
+Let's consider an image with dimensions $w,h$. Now, consider a rectangle within the image with dimensions $w^\*,h^\*$, call it *reference zone* $Z$, hence $w^\*\leq w,h^\*\leq h$. The *reference zone* $Z$ can be positioned at any location in the image with coordinates $x,y$ respectively for the *x* and *y* axis using the top left corner of the rectangle as reference. We can apply a geometric transformation (like homography or affine) $T$ to $Z$ using a sampling grid normalizing the corresponding axis $x\_{axis}=[0,w^\*]$ and $y\_{axis}=[0,h^\*]$ to $[-1,1]$ respectively. That allow us to apply an arbitrary transformation $T$ to an smaller portion of an image and project that transformation directly into a bigger space if needed like as illustrated in the next image.
 
 insert image
 
