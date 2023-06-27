@@ -34,6 +34,35 @@ The procedure for this is not that straight forward to understand so let's make 
 
 ## Extras
 
-This approach not only allow us to apply differents transformations on smaller portions of an image. This also allow to apply transformations and project them into bigger spaces so we don't lose any information. To do this we only need to add some padding to our grid and take $Z$ match the dimensions of the image and offset 0.
+This approach not only allow us to apply differents transformations on smaller portions of an image. This also allow to apply transformations and project them into bigger spaces so we don't lose any information. To do this we only need to add some padding to our grid and take $Z$ match the dimensions of the image and offset zero.
 
 ![Extra result](./images/figures/Example5.jpg)
+
+# Runnig examples
+
+The examples that produce the results shown above can be found in the `example1.py` and `example2.py` respectively. Feel free to experiment.
+
+## Dependencies
+
+To run the examples make sure to install:
+
+- Numpy
+- Pytorch
+- Matplotlib
+- scikit-image
+
+## Run the examples
+
+The examples write the results in the `images` folder and shows a plot made with matplotlib
+
+### Transformation on smaller portion
+
+```console
+python example1.py
+```
+
+### Transformation on bigger space
+
+```console
+python example2.py
+```
