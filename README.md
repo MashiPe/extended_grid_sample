@@ -34,7 +34,7 @@ The procedure for this is not that straight forward to understand so let's make 
 
 ## Extras
 
-This approach not only allow us to apply differents transformations on smaller portions of an image. This also allow to apply transformations and project them into bigger spaces so we don't lose any information. To do this we only need to add some padding to our grid and take $Z$ match the dimensions of the image and offset zero.
+This approach not only allow us to apply differents transformations on smaller portions of an image. Now we can apply transformations to the whole image and project them into bigger spaces so we don't lose any information. To do this we only need to make $Z$ match the dimensions of the image, add some padding to our grid accoring to how big the result image is needed and use and offset equal to 0.
 
 ![Extra result](./images/figures/Example5.jpg)
 
