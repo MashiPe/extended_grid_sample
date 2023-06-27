@@ -19,7 +19,7 @@ The procedure for this is not that straight forward to understand so let's make 
 
 ![Example problem definition](./images/figures/Example1.jpg)
 
-2) Now we can define 2 grids to create our sampling grid. One for the $x_{axis}$ coordinates and one for the $y_{axis}$ coordinates. Both if this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^\*]$ and $[0:h^\*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
+2) Now we can define 2 grids to create our sampling grid. One for the $x_{axis}$ coordinates and one for the $y_{axis}$ coordinates. Both of this grids have the same $w,h$ dimensions as the image and describes a normalize space taking the sequences $[0:w^\*]$ and $[0:h^\*]$ respectively as reference and padding this sequences to accommodate the extra space. Then we can apply our transformation $T$ to this grid and form our final sampling grid.
 
 ![Grid creation](./images/figures/Example2.jpg)
 
@@ -28,7 +28,7 @@ The procedure for this is not that straight forward to understand so let's make 
 ![Grid processing](./images/figures/Example3.jpg)
 
 
-4) After that the procedure to calculate the values for the new image is the same as in the [https://github.com/pytorch/pytorch/blob/f064c5aa33483061a48994608d890b968ae53fb5/aten/src/THNN/generic/SpatialGridSamplerBilinear.c#L41](pytorch) `grid_sample` implementation, we only need to keep in consideration the size of the image, that is, our coordinates described by the sampling grid must be between $[0,w]$ for $x$ and $[0,h]$ for $y$. This process yields a result like this:
+4) After that the procedure to calculate the values for the new image is the same as in the [Pytorch](https://github.com/pytorch/pytorch/blob/f064c5aa33483061a48994608d890b968ae53fb5/aten/src/THNN/generic/SpatialGridSamplerBilinear.c#L41) `grid_sample` implementation, we only need to keep in consideration the size of the image, that is, our coordinates described by the sampling grid must be between $[0,w]$ for $x$ and $[0,h]$ for $y$. This process yields a result like this:
 
 ![Result](./images/figures/Example4.jpg)
 
