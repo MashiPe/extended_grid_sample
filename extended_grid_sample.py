@@ -1,6 +1,14 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def extended_grid_sample(image,grid,real_h=240,real_w=240,y_shift=None,x_shift=None):
+
+    # fig, axs = plt.subplots(1,3)
+    # axs[0].imshow(image)
+    # axs[0].set_title('src')
+
+    # fig.set_dpi(150)
+    # plt.show()
 
     h_limit = image.shape[0]
     w_limit = image.shape[1]
@@ -97,5 +105,6 @@ def extended_grid_sample(image,grid,real_h=240,real_w=240,y_shift=None,x_shift=N
     out_val = nw_val*nw_ + ne_val*ne_ + sw_val*sw_ + se_val*se_
     
     output = out_val
+    
     
     return output
