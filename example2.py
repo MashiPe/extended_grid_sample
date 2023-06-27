@@ -90,8 +90,8 @@ def main():
     '''
 
     # Extending axis so the transformation doesn't make lose any information
-    x_axis = extend_axis(x_axis,60,60)
-    y_axis = extend_axis(y_axis,60,60)
+    x_axis = extend_axis(x_axis,60,0)
+    y_axis = extend_axis(y_axis,60,0)
 
     # Same process to generate the grid
     
