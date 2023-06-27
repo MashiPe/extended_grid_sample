@@ -40,7 +40,7 @@ This approach not only allow us to apply differents transformations on smaller p
 
 # Runnig examples
 
-The examples that produce the results shown above can be found in the `example1.py` and `example2.py` respectively. Feel free to experiment.
+The examples that produces the results shown above can be found in the `example1.py` and `example2.py` scripts respectively. Feel free to experiment.
 
 ## Dependencies
 

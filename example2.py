@@ -123,11 +123,17 @@ def main():
     axs[0].imshow(img)
     axs[0].set_title('src')
     axs[1].imshow(new_img_pytorch)
-    axs[1].set_title('pytorch_implementation')
+    axs[1].set_title('pytorch_impl')
     axs[2].imshow(new_img_proposal)
     axs[2].set_title('proposal')
 
     fig.set_dpi(150)
+    plt.subplots_adjust(left=0.1,
+                    bottom=0.1,
+                    right=0.9,
+                    top=0.9,
+                    wspace=0.5,
+                    hspace=0.5)
     plt.show()
 
     # pass
