@@ -1,6 +1,6 @@
 # Description for extended_grid_sample
 
-This is just a detailed description of my proposal to extend the grid_sample from pytorch [here](https://github.com/pytorch/pytorch/issues/100526) plus a simple implementation using numpy.
+This is a detailed description of my proposal to extend the grid_sample from pytorch [here](https://github.com/pytorch/pytorch/issues/100526) plus a simple implementation using numpy. Keep in mind that this is just my take to solve this problem. Theres already an implementation in torchvision through [_perspective_grid](https://github.com/pytorch/vision/blob/c9ac3a5b03731fa17d3934b552f308791314602b/torchvision/transforms/v2/functional/_geometry.py#L1305-L1332) and [_apply_grid_transform](https://github.com/pytorch/vision/blob/c9ac3a5b03731fa17d3934b552f308791314602b/torchvision/transforms/v2/functional/_geometry.py#L476) functions.
 
 ## Considerations
 
